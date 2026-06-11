@@ -1,0 +1,13 @@
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        hmap = {}
+
+        for i, n in enumerate(nums):
+            if target - n in hmap:
+                return [hmap[target - n], i]
+            else:
+                hmap[n] = i
+
+        return -1
+        # Time complexity: O(n)
+        # Space Complexity: O(n)
